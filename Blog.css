@@ -1,0 +1,32 @@
+
+#navbar {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+#navbar ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+#navbar ul li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+  padding: 1em;
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+#navbar ul li a:hover {
+  border-bottom: 3px solid black;
+}
