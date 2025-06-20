@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gundlav Primary School</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght%40300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div id="home" class="absolute top-0 left-0 w-full h-px"></div>
+
+    <header class="bg-gradient-to-r from-blue-950 to-blue-800 text-white py-6 px-6 md:px-10 shadow-lg">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="images/Gundlav_logo_transparent.jpg" alt="Gundlav Logo" class="h-20 w-20 md:h-24 md:w-24 rounded-full shadow-md">
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-center flex-grow" id="schoolTitle">Gundlav Primary School</h1>
+            <div class="language-toggle" id="languageToggleContainer">
+                <button id="languageToggleButton" onclick="toggleLanguage()" class="bg-blue-700 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md flex items-center space-x-2 transition-colors duration-300">
+                    <i class="fas fa-globe"></i>
+                    <span id="languageButtonText">ગુજરાતી</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-sky-200 text-red-700 py-1 text-center text-lg md:text-xl font-bold overflow-hidden shadow-inner">
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            <h4 id="announcementMarquee">Gundlav Primary School is selected for "School of Excellence" by Gujarat Government</h4>
+        </marquee>
+    </div>
+
+    <nav class="bg-blue-900 text-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="topnav flex justify-between md:justify-start items-center py-3" id="myTopnav">
+                <a href="#home" class="block py-2 px-4 hover:bg-blue-800 rounded-md font-medium active" id="navHome">Home</a>
+                
+                <div class="dropdown relative group">
+                    <button class="dropbtn py-2 px-4 hover:bg-blue-800 rounded-md font-medium flex items-center" id="navAdministration">
+                        Administration <i class="fa fa-caret-down ml-2"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="TeacherInfo.html" id="dropdownTeacherInfo">Teacher Info</a>
+                        <a href="images/sch11.jpg" target="_blank" rel="noopener noreferrer" id="dropdownTeacherPhoto">Teacher Photo</a>
+                    </div>
+                </div> 
+
+                <div class="dropdown relative group">
+                    <button class="dropbtn py-2 px-4 hover:bg-blue-800 rounded-md font-medium flex items-center" id="navTeacherCorner">
+                        Teacher Corner <i class="fa fa-caret-down ml-2"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://attendance-ss.gujarat.gov.in/" target="_blank" rel="noopener noreferrer" id="dropdownStudentAttendance">Student Attendance</a> 
+                    </div>
+                </div> 
+
+                <div class="dropdown relative group">
+                    <button class="dropbtn py-2 px-4 hover:bg-blue-800 rounded-md font-medium flex items-center" id="navStudentCorner">
+                        Student Corner <i class="fa fa-caret-down ml-2"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="form.html" id="dropdownForm">Form</a>
+                        <a href="https://gshala.schoolnetindia.com/" target="_blank" rel="noopener noreferrer" id="dropdownGshala">G-shala</a>
+                    </div>
+                </div> 
+
+                <div class="dropdown relative group">
+                    <button class="dropbtn py-2 px-4 hover:bg-blue-800 rounded-md font-medium flex items-center" id="navSchoolActivity">
+                        School Activity <i class="fa fa-caret-down ml-2"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="Blog.html" id="dropdownMathsScience">Maths Science Activity</a>
+                        <a href="#" id="dropdownBestOutWaste">Best out of Waste</a>
+                        <a href="#" id="dropdownDayCelebration">Day Celebration</a>
+                    </div> 
+                </div> 
+            
+                <div class="dropdown relative group">
+                    <button class="dropbtn py-2 px-4 hover:bg-blue-800 rounded-md font-medium flex items-center" id="navDonation">
+                        Donation <i class="fa fa-caret-down ml-2"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="practise.html" id="dropdownGooglePay">Google Pay</a>
+                    </div>
+                </div> 
+
+                <div class="dropdown relative group">
+                    <button class="dropbtn py-2 px-4 hover:bg-blue-800 rounded-md font-medium flex items-center" id="navUploadZone">
+                        Upload Zone <i class="fa fa-caret-down ml-2"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="upload.html" id="dropdownUploadImageCaption">Upload Image & Caption</a>
+                    </div>
+                </div>
+                
+                
+                <div class="dropdown relative group">
+                    <button class="dropbtn py-2 px-4 hover:bg-blue-800 rounded-md font-medium flex items-center" id="navSocialMedia">
+                        Social Media <i class="fa fa-caret-down ml-2"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=valsad.vlsd.gundlavprashala@gmail.com" target="_blank" rel="noopener noreferrer" id="dropdownGmail">G-mail</a>
+                        <a href="https://www.facebook.com/gundlav.prashala.9" target="_blank" rel="noopener noreferrer" id="dropdownFacebook">Facebook</a>
+                        <a href="https://x.com/GundlavS89280" target="_blank" rel="noopener noreferrer" id="dropdownTwitter">Twitter</a>
+                        <a href="https://www.youtube.com/@gundlavprashala2994" target="_blank" rel="noopener noreferrer" id="dropdownYouTube">YouTube</a>
+                    </div>
+                </div> 
+                
+                <a href="#contact-section" class="block py-2 px-4 hover:bg-blue-800 rounded-md font-medium" id="navContactUs">Contact Us</a>
+                <a href="javascript:void(0);" class="icon text-white text-2xl md:hidden" onclick="myFunction()">☰</a>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container mx-auto px-4 py-8">
+        <section id="about-school" class="rounded-lg shadow-md bg-white p-6 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="md:col-span-1">
+                    <h2 class="text-3xl font-bold text-blue-700 mb-4 text-center" id="schoolCampusOverviewTitle">School Campus Overview</h2>
+                    <video autoplay muted loop id="myVideo" class="w-full h-auto max-h-96 object-cover rounded-lg">
+                        <source src="images/gundlav primary school cmp.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="md:col-span-1">
+                    <h2 class="text-3xl font-bold text-blue-700 mb-4 text-center md:text-left" id="aboutSchoolTitle">About Gundlav Primary School</h2>
+                    <ul class="list-disc list-inside text-xl leading-relaxed text-gray-700 space-y-3 mb-6">
+                        <li id="aboutListItem1">Established in 1955 and managed by a Local Body.</li>
+                        <li id="aboutListItem2">Located in a Rural area within the Valsad block of Valsad district, Gujarat.</li>
+                        <li id="aboutListItem3">Offers education for Grade Balvatika & 1 to 8.</li>
+                        <li id="aboutListItem4">Gujarati is the medium of instruction.</li>
+                        <li id="aboutListItem5">Academic session commences in June.</li>
+                        <li id="aboutListItem6">Operates from a Government building with 19 functional classrooms.</li>
+                        <li id="aboutListItem7">Equipped with functional tap water and toilets.</li>
+                        <li id="aboutListItem8">Includes a dedicated playground and a library.</li>
+                    </ul>
+                    <p class="text-lg italic text-gray-600 text-center md:text-left" id="quoteText">
+                        "Education is not the filling of a pail, but the lighting of a fire." - W.B. Yeats
+                    </p>
+                    <div class="mt-6 text-center md:text-left">
+                        <a href="#about-school" class="inline-block bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-blue-800 transition-colors duration-300 transform hover:scale-105" id="learnMoreBtn">
+                            Learn More About Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section id="current-news" class="bg-gray-200 py-4 shadow-md mt-4 rounded-lg">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold text-blue-800 mb-3 text-center">Current News</h2>
+                <div class="news-marquee-container bg-white p-3 rounded-lg shadow-inner">
+                    <marquee behavior="scroll" direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" class="news-marquee">
+                        <p class="news-item" id="newsitem1">✨  A parent's Conference was held at Gundlav Primary School on 23rd June 2025! 📚</p>
+                        <p class="news-item" id="newsitem2">🎉  Girl's Educaiton and School Entrance Festival will be held at Gundlav Primary School on 26 June 2025!🏅</p>
+                       
+                    </marquee>
+                </div>
+            </div>
+        </section>
+        </main>
+
+    <section class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold text-blue-700 mb-6 text-center" id="ourMomentsTitle">Our Moments</h2>
+        <div class="carousel-container" id="image-carousel">
+            <div class="carousel-images" id="carouselImages">
+                <div class="carousel-item">  
+                    <img src="images/g1.jpg" alt="Creative coloring fun" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption1">Baal Mela: Creative coloring fun!</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g2.jpg" alt="Engaging with learning materials" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption2">TLM Celebration Day 1 (22/07/2023): Engaging with learning materials.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g3.jpg" alt="Art and craft displays" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption3">Baal Mela activities: Art and craft displays by young artists.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g4.jpg" alt="Community interaction" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption4">Community interaction and address during an event.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g5.jpg" alt="Joyful celebration" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption5">Joyful celebration with children and adults.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g6.jpg" alt="Happy moments" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption6">Happy moments with children in party hats.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g7.jpg" alt="Green initiative" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption7">Students engaged in a green initiative, tending to plants.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g8.jpg" alt="Indoor gathering" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption8">Indoor gathering of students for an assembly or event.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g9.jpg" alt="Independence Day" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption9">Independence Day celebrations at the school.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g10.jpg" alt="Patriotic fervor" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption10">Patriotic fervor during Independence Day.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g11.jpg" alt="Waving flag" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption11">Students proudly waving the Indian flag.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g12.jpg" alt="Rangoli designs" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption12">Creative Rangoli designs with patriotic themes.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g13.jpg" alt="Life Skills Fair" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption13">Life Skills Fair: Practical learning activities on 03/08/2024.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g14.jpg" alt="Smartboard lesson" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption14">Interactive smartboard lesson in progress.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g15.jpg" alt="Scholarship achievers" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption15">Gundlav Primary School's pride: NMMS Scholarship Achievers.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g16.jpg" alt="Kabbadi tournament" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption16">Taluka-level Kabbadi tournament at PD Patel High School, Valsad.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g17.jpg" alt="Vocational education awareness" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption17">Skills on Wheels: Vocational education awareness.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g18.jpg" alt="Self-defense training" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption18">Self-defense training participants.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g19.jpg" alt="Patriotic formation" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption19">Patriotic formation with flags.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g20.jpg" alt="Nursery visit for plant learning" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption20">Nursery visit for plant learning.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g21.jpg" alt="Creative Teaching-Learning Materials (TLM)" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption21">Creative Teaching-Learning Materials (TLM).</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g22.jpg" alt="World Yoga Day celebration" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption22">World Yoga Day celebration.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g23.jpg" alt="Art Utsav: Celebrating Gujarati culture" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption23">Art Utsav: Celebrating Gujarati culture.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g24.jpg" alt="Language Corner: Interactive learning" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption24">Language Corner: Interactive learning.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g25.jpeg" alt="National Science Day presentation" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption25">National Science Day presentation.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g26.jpeg" alt="Students presenting a handmade project" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption26">Students presenting a handmade project.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g27.jpeg" alt="Students planting a tree" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption27">Students planting a tree.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g28.jpeg" alt="Presenting a smart city model" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption28">Presenting a smart city model.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g29.jpeg" alt="Outdoor learning session" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption29">Outdoor learning session.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g30.jpeg" alt="Good Teachers know how to bring out the best in 'Students'" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption30">Good Teachers know how to bring out the best in "Students"</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g31.jpeg" alt="Albert Einstein quote" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption31">‘I never teach my pupils; I only attempt to provide the conditions in which they can learn.’ –Albert Einstein</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g32.jpeg" alt="Transformative education" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption32">Transformative education for those who learn differently.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g33.jpeg" alt="Responsible citizens" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption33">Preparing responsible citizens and effective leaders.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g34.jpeg" alt="Making a difference" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption34">Making a difference for our future. Opportunity, Innovation, Success.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g35.jpeg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption35">Inspiring Students with Distinction. Learn with passion to live with purpose.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g36.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption36">Students in Valsad engage in a group activity or presentation in their classroom.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g37.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption37">Inspiring Students with Distinction. Learn with passion to live with purpose.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g38.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption38">Students in Valsad learn about fire safety and rescue.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g39.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption39"> Award winners at the "Science Fair" in Valsad.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g40.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption40">Students engaged in a hands-on science experiment.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g41.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption41">Young students conducting an outdoor science experiment.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g42.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption42">Students collaborating on a classroom science project.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g43.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption43">Students learning to use a telescope for astronomy.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g44.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption44"> Students on an educational trip at the Gujarat Vidhan Sabha.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g45.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption45">: A student operates a scientific instrument with guidance.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g46.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption46">Students observe a tool demonstration outdoors.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g47.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption47">Young girls learning human anatomy with a skeleton model.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g48.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption48"> Students excitedly pose in front of an "I ❤️ Science" sign.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g49.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption49">Students observe a model airplane display at a science exhibit.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g50.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption50">A student interacts with an educational quiz on a large screen.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g51.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption51">Students observe a solar power demonstration.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g52.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption52">Students wearing 3D glasses watch a presentation.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g53.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption53">A student practices using a fire extinguisher.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g54.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption54">Girls intently watch a science demonstration.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g55.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption55">Students pose in front of a large Hanuman statue.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g56.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption56">Students engage in a hands-on learning activity in a classroom.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g57.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption57">A group of students gather in front of a large statue.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g58.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption58">Adults supervise students engaged in a classroom activity.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g59.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption59">Girls learn "Data Science" on computers in a lab.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g60.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption60">Students work on repairing a bicycle wheel.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g61.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption61">Students learn hands-on bicycle repair.</div>
+                </div>
+                <div class="carousel-item">  
+                    <img src="images/g62.jpg" alt="Inspiring Students" class="carousel-image">
+                    <div class="carousel-caption" id="galleryCaption62">A girl in safety glasses learns to use a tool.</div>
+                </div>
+            </div>
+            <button class="carousel-button prev" onclick="moveCarousel(-1)">❮</button>
+            <button class="carousel-button next" onclick="moveCarousel(1)">❯</button>
+        </div>
+    </section>
+
+    <footer id="contact-section" class="bg-blue-950 text-white py-8 text-sm md:text-base text-center">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4 text-blue-300" id="footerContactUsTitle">Contact Us</h3>
+                <p class="mb-1" id="footerPrincipal">Principal: Rajeshkumar B. Patel</p>
+                <p class="mb-1" id="footerPhone">Phone: +91 7573037127</p>
+                <p class="mb-1"><span id="footerEmailText">Email</span>: <a href="mailto:valsad.vlsd.gundlavprashala@gmail.com" class="hover:underline text-blue-200" target="_blank" rel="noopener noreferrer">valsad.vlsd.gundlavprashala@gmail.com</a></p>
+                <p id="footerAddress">Address: Gundlav Primary School, Valsad, Gujarat, India</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <h3 class="text-xl font-bold mb-4 text-blue-300" id="footerUsefulLinksTitle">Useful Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:underline text-blue-200" id="footerLinkHome">Home</a></li>
+                    <li><a href="TeacherInfo.html" class="hover:underline text-blue-200" id="footerLinkTeacherInfo">Teacher Info</a></li>
+                    <li><a href="https://attendance-ss.gujarat.gov.in/" class="hover:underline text-blue-200" target="_blank" rel="noopener noreferrer" id="footerLinkStudentAttendance">Student Attendance</a></li>
+                    <li><a href="https://gshala.schoolnetindia.com/" class="hover:underline text-blue-200" target="_blank" rel="noopener noreferrer" id="footerLinkGshala">G-shala</a></li>
+                    <li><a href="upload.html" class="hover:underline text-blue-200" id="footerLinkUploadImageCaption">Upload Image & Caption</a></li>
+                    <li><a href="#contact-section" class="hover:underline text-blue-200" id="footerLinkContactUs">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4 text-blue-300" id="footerFollowUsTitle">Follow Us</h3>
+                <div class="flex justify-center space-x-4">
+                    <a href="https://www.facebook.com/gundlav.prashala.9" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-white transition-colors duration-200" id="footerLinkFacebookIcon">
+                        <i class="fab fa-facebook-square text-3xl"></i>
+                    </a>
+                    <a href="https://x.com/GundlavS89280" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-white transition-colors duration-200" id="footerLinkTwitterIcon">
+                        <i class="fab fa-twitter-square text-3xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@gundlavprashala2994" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-white transition-colors duration-200" id="footerLinkYoutubeIcon">
+                        <i class="fab fa-youtube-square text-3xl"></i>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=valsad.vlsd.gundlavprashala@gmail.com" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:text-white transition-colors duration-200" id="footerLinkGmailIcon">
+                        <i class="fas fa-envelope-square text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-4 border-t border-gray-700 text-center">
+            <p id="footerCopyright">© 2025 Gundlav Primary School. All rights reserved.</p>
+            <p class="mt-1" id="footerDesignedBy">Designed and Maintained by Riyan Patel</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

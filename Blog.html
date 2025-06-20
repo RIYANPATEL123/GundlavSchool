@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+</head>
+<body>
+
+ 
+    <div id="navbar">
+        <div class="container">
+          <ul>
+            <li><a href="index.html">Home</a></li>	 
+                
+          </ul>
+        </div>
+      </div>
+
+      <div id="upload-section" style="padding: 40px;">
+  <h2>Upload School Activity Image and Caption</h2>
+
+  <input type="file" id="imgInput" accept="image/*"><br><br>
+  <textarea id="captionInput" rows="2" cols="50" placeholder="Write a caption..."></textarea><br><br>
+  <button onclick="displayUserImage()">Upload</button>
+
+  <div id="userImageContainer" style="display:none; margin-top: 20px;">
+    <img id="uploadedImage" width="400">
+    <p id="userCaption" style="font-weight: bold;"></p>
+  </div>
+</div>
+
+<script>
+  function displayUserImage() {
+    const fileInput = document.getElementById('imgInput');
+    const caption = document.getElementById('captionInput').value;
+    const file = fileInput.files[0];
+
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('uploadedImage').src = e.target.result;
+        document.getElementById('userCaption').textContent = caption;
+        document.getElementById('userImageContainer').style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+</script>
+
+    
+    
+</body>
+</html>

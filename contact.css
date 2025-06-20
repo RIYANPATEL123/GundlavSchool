@@ -1,0 +1,17 @@
+body{
+    
+    background-color: whitesmoke;
+}
+h1,p,h3{
+    
+    text-align: center;
+
+}
+
+p{
+    margin-bottom: 5px;;
+}
+p.hi{
+    border: solid;
+
+}

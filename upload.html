@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Image & Caption</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="padding: 40px; font-family: sans-serif;">
+
+  <h2>Upload Your Image and Caption</h2>
+
+  <input type="file" id="imgInput" accept="image/*">
+  <br><br>
+  <textarea id="captionInput" rows="2" cols="50" placeholder="Write your caption here..."></textarea>
+  <br><br>
+  <button onclick="displayUserImage()">Upload and Show</button>
+
+  <br><br>
+
+  <div id="userImageContainer" style="display:none;">
+    <h3>Your Uploaded Image:</h3>
+    <img id="uploadedImage" width="400">
+    <p id="userCaption" style="font-weight: bold;"></p>
+  </div>
+
+  <script>
+    function displayUserImage() {
+      const fileInput = document.getElementById('imgInput');
+      const caption = document.getElementById('captionInput').value;
+      const file = fileInput.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('uploadedImage').src = e.target.result;
+          document.getElementById('userCaption').textContent = caption;
+          document.getElementById('userImageContainer').style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+
+</body>
+</html>

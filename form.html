@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Holiday/Leave Request Form - Gundlav Primary School</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body >
+<div id="navbar">
+  <div class="container">
+    <ul>
+      <li><a href="index.html">Home</a></li>	 
+      
+    </ul>
+  </div>
+</div>
+
+<div class="regform">
+	<h1>Holiday/Leave Request Form</h1></div>
+
+  <div class ="main">
+<form id ="testForm">
+  <h2 class="name"> Standard (Std.) </h2>
+  <select id ="std_select" name ="std_select">
+    <option disabled="disabled" required selected="selected">--choose</option>
+  <option> 1</option>
+  <option> 2</option>
+  <option> 3</option>
+  <option> 4</option>
+  <option> 5</option>
+  <option> 6</option>
+  <option> 7</option>
+  </select>
+
+  <div id="name">
+  <h2 class ="name">Full Name</h2>
+  <label id="namelabel"></label><br>
+  <input id ="fullname" type="text" required name ="full_name">
+  </div>
+
+  <h2 class ="name"> Reason for Leave </h2>
+  <textarea id ="reason_for_leave" name ="reason_for_leave" rows="5"></textarea>
+  
+  <h2 class ="name">Mobile Number</h2>
+  <input id ="mobile" type="text" name ="mobile" required pattern="[789][0-9]{9}">
+  
+<input id="submit" type="submit">
+
+</p>
+<h2 id="centers"> . <span id="result"></span><br>
+</div>
+</form>
+</div>
+<script>
+
+
+</script>
+<script src="https://www.gstatic.com/firebasejs/6.3.4/firebase.js"></script>
+<script  src="form.js"></script>
+
+</body>
+</html>
