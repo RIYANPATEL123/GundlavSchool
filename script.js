@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (videoElement) {
         // Set the video playback rate to 1.5x (can be changed to any desired value)
-        videoElement.playbackRate = 2.0; // Video will play at 1.5 times normal speed
+        videoElement.playbackRate = 2.5; // Video will play at 1.5 times normal speed
         // console.log("Video playback rate set to:", videoElement.playbackRate);
     } else {
         // console.error("Video element with ID 'myVideo' not found.");
