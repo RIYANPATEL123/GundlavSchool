@@ -22,11 +22,10 @@ header {
 
 /* Dropdown Navigation */
 .dropdown {
-    position: relative; /* Crucial: Ensures dropdown-content is positioned relative to this parent */
-    display: inline-block; /* Allows items to sit side-by-side naturally, better with flexbox */
-    /* REMOVED: float: left; - This caused conflicts with modern layouts */
-    /* REMOVED: overflow: hidden; - This was hiding the dropdown content */
-    overflow: visible; /* Ensures the dropdown content is NOT clipped by the parent */
+    position: relative; /* Add position relative to the dropdown container */
+    display: inline-block; /* Ensure dropdown takes up only necessary space */
+    float: none; /* Remove float as it can cause layout issues with flexbox/grid */
+    overflow: visible; /* Ensure content is not clipped */
 }
 
 .dropdown .dropbtn {
@@ -38,24 +37,24 @@ header {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-    cursor: pointer;
+    cursor: pointer; /* Add cursor pointer to indicate it's clickable/hoverable */
 }
 
 .dropdown-content {
-    display: none; /* Hidden by default */
-    position: absolute; /* Positions it relative to the nearest positioned ancestor (.dropdown) */
+    display: none;
+    position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1;
     border-radius: 0.375rem; /* rounded-md */
-    left: 0; /* Aligns to the left edge of the parent dropdown */
-    top: 100%; /* Positions directly below the dropbtn */
+    left: 0; /* Align dropdown content to the left of the button */
+    top: 100%; /* Position below the button */
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block; /* Makes it visible on hover */
+    display: block;
 }
 
 .dropdown-content a {
@@ -64,7 +63,7 @@ header {
     text-decoration: none;
     display: block;
     text-align: left;
-    white-space: nowrap; /* Prevents text from wrapping within dropdown items */
+    white-space: nowrap; /* Prevent text wrapping within dropdown items */
 }
 
 .dropdown-content a:hover {
@@ -197,4 +196,10 @@ header {
     height: 150px; /* Fixed height for the marquee area */
     overflow: hidden; /* Ensures content outside this height is hidden */
     position: relative;
+}
+
+.carousel-item {
+    min-width: 100%; /* Each item takes the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    position: relative; /* Needed for absolute positioning of the caption */
 }
