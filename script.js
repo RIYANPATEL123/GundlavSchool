@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// JavaScript for image carousel
+// JavaScript for image carousel (kept for future use, not currently in HTML)
 let currentImageIndex = 0;
 let carouselInterval; // Declare carouselInterval globally
 
@@ -69,17 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (carouselContainer) {
         carouselContainer.addEventListener('mouseenter', () => clearInterval(carouselInterval)); // Pause on mouse enter
         carouselContainer.addEventListener('mouseleave', startCarouselAutoPlay); // Resume on mouse leave
-    }
-
-    // Attach event listeners for carousel buttons
-    const prevButton = document.querySelector('.carousel-button.prev');
-    const nextButton = document.querySelector('.carousel-button.next');
-
-    if (prevButton) {
-        prevButton.addEventListener('click', () => moveCarousel(-1));
-    }
-    if (nextButton) {
-        nextButton.addEventListener('click', () => moveCarousel(1));
     }
 
     // Start auto-play when the page loads if carousel exists
@@ -215,8 +204,8 @@ const translations = {
         footerFollowUsTitle: "Follow Us",
         footerCopyright: "© 2025 Gundlav Primary School. All rights reserved.",
         footerDesignedBy: "Designed and Maintained by Riyan Patel",
-        newsitem1:"✨  A parent's Conference was held at Gundlav Primary School on 23rd June 2025! 📚",
-        newsitem2:"🎉  Girl's Educaiton and School Entrance Festival will be held at Gundlav Primary School on 26 June 2025!🏅"
+        newsitem1:"✨  A parent's Conference was held at Gundlav Primary School on 23rd June 2025! 📚",
+        newsitem2:"🎉  Girl's Educaiton and School Entrance Festival will be held at Gundlav Primary School on 26 June 2025!🏅"
     },
     gu: {
         schoolTitle: "ગુંદલાવ પ્રાથમિક શાળા",
@@ -334,8 +323,8 @@ const translations = {
         footerFollowUsTitle: "અમને અનુસરો",
         footerCopyright: "© 2025 ગુંદલાવ પ્રાથમિક શાળા. સર્વ હક સુરક્ષિત.",
         footerDesignedBy: "રિયાન પટેલ દ્વારા ડિઝાઇન અને જાળવણી",
-        newsitem1: "✨  ૨૩ જૂન ૨૦૨૫ ના રોજ ગુંદલાવ પ્રાથમિક શાળામાં વાલી સંમેલન યોજાયું ! 📚",
-        newsitem2: "🎉  કન્યા કેણવણી અને શાળા પ્રવેશોત્સવ ૨૬ જૂન ૨૦૨૫ ના રોજ ગુંદલાવ પ્રાથમિક શાળા ખાતે યોજાશે!🏅"
+        newsitem1: "✨  ૨૩ જૂન ૨૦૨૫ ના રોજ ગુંદલાવ પ્રાથમિક શાળામાં વાલી સંમેલન યોજાયું ! 📚",
+        newsitem2: "🎉  કન્યા કેણવણી અને શાળા પ્રવેશોત્સવ ૨૬ જૂન ૨૦૨૫ ના રોજ ગુંદલાવ પ્રાથમિક શાળા ખાતે યોજાશે!🏅"
     }
 };
 
@@ -359,7 +348,7 @@ function updateContent(lang) {
                 // For this structure, textContent works if the icon is a sibling, not nested within the text.
                 // If it contains an icon, we might need to be more precise.
                 // For this example, let's assume the text is the direct child for simplicity.
-                // Check if the element contains a Font Awesome icon
+                 // Check if the element contains a Font Awesome icon
                 const icon = element.querySelector('.fa, .fas, .fab');
                 if (icon) {
                     // If it has an icon, only update the text node that is not the icon
@@ -369,9 +358,9 @@ function updateContent(lang) {
                             node.textContent = translations[lang][id];
                         }
                     });
-                    // Special handling for navigation dropdown buttons (e.g., Administration)
-                    // If the element has a text node and an icon, update the text node.
-                    if (element.id && (element.id.startsWith("nav") || element.id.startsWith("dropdown"))) {
+                     // Special handling for navigation dropdown buttons (e.g., Administration)
+                     // If the element has a text node and an icon, update the text node.
+                     if (element.id && (element.id.startsWith("nav") || element.id.startsWith("dropdown"))) {
                         // Find the direct text node to update, ignoring the icon
                         let textNodeFound = false;
                         for (let i = 0; i < element.childNodes.length; i++) {
@@ -390,9 +379,10 @@ function updateContent(lang) {
                         element.textContent = translations[lang][id];
                     }
                 } else {
-                    element.textContent = translations[lang][id];
+                     element.textContent = translations[lang][id];
                 }
-            } else {
+            }
+             else {
                 element.textContent = translations[lang][id];
             }
         }
