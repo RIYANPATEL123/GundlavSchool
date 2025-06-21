@@ -60,7 +60,7 @@ function startCarouselAutoPlay() {
     clearInterval(carouselInterval);
     carouselInterval = setInterval(() => {
         moveCarousel(1); // Move to the next image
-    }, 5000); // Change image every 5 seconds (5000 milliseconds)
+    }, 2000); // Change image every 2 seconds (2000 milliseconds)
 }
 
 // Event listeners to pause/resume auto-play on hover
