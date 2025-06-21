@@ -22,8 +22,10 @@ header {
 
 /* Dropdown Navigation */
 .dropdown {
-    float: left;
-    overflow: hidden;
+    position: relative; /* Add position relative to the dropdown container */
+    display: inline-block; /* Ensure dropdown takes up only necessary space */
+    float: none; /* Remove float as it can cause layout issues with flexbox/grid */
+    overflow: visible; /* Ensure content is not clipped */
 }
 
 .dropdown .dropbtn {
@@ -35,6 +37,7 @@ header {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    cursor: pointer; /* Add cursor pointer to indicate it's clickable/hoverable */
 }
 
 .dropdown-content {
@@ -45,26 +48,30 @@ header {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     border-radius: 0.375rem; /* rounded-md */
+    left: 0; /* Align dropdown content to the left of the button */
+    top: 100%; /* Position below the button */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content a {
-    float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
+    white-space: nowrap; /* Prevent text wrapping within dropdown items */
 }
 
 .dropdown-content a:hover {
     background-color: #ddd;
+    border-radius: 0.375rem; /* rounded-md */
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Responsive Navigation */
+/* Responsive navigation for small screens */
 .topnav .icon {
     display: none;
 }
@@ -103,27 +110,33 @@ header {
     }
 }
 
-/* Hero Video Section */
-#hero {
-    height: 500px; /* Adjust height as needed */
+/* Hero Video Section Styles */
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
 }
 
-#myVideo {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    background-size: cover;
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the area without distortion */
 }
 
-/* Image Carousel */
+/* Our Moments Section - Image Carousel Styles */
 .carousel-container {
     position: relative;
+    width: 100%;
     max-width: 900px; /* Adjust as needed */
-    margin: auto;
+    margin: 0 auto;
     overflow: hidden;
-    border-radius: 0.75rem; /* rounded-lg */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
 }
 
 .carousel-images {
@@ -131,10 +144,9 @@ header {
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item {
+.carousel-image-wrapper {
     min-width: 100%;
     box-sizing: border-box;
-    position: relative;
 }
 
 .carousel-image {
@@ -183,22 +195,5 @@ header {
 .news-marquee-container {
     height: 150px; /* Fixed height for the marquee area */
     overflow: hidden; /* Ensures content outside this height is hidden */
-}
-
-.news-marquee {
-    height: 100%; /* Marquee takes full height of its container */
-    padding: 0 10px; /* Add some padding around the text */
-    color: #dc2626; /* Red text color */
-    font-weight: bold;
-}
-
-.news-item {
-    padding: 8px 0; /* Vertical spacing between news items */
-    font-size: 1.15rem; /* Adjust font size as needed */
-    line-height: 1.4; /* Adjust line height for better readability */
-}
-
-/* Ensure the marquee content does not stop abruptly at the bottom */
-.news-marquee p:last-child {
-    margin-bottom: 0;
+    position: relative;
 }
