@@ -1,0 +1,180 @@
+body{
+  background-color: #0d1b2a; /* Darker navy blue for deeper base */
+  background-position:'center';
+  background-size:cover;
+  font-family:sans-serif;
+  margin-top:40px;
+}
+.regform{
+  width:800px;
+  background-color: #1b263b; /* Slightly lighter navy for header */
+  margin:auto;
+  margin-top: 20px;
+  color:#e0e1dd; /* Off-white for better contrast */
+  padding:15px 0px 15px 0px; /* Slightly more padding */
+  text-align:center;
+  border-radius:10px 10px 0px 0px; /* Slightly less rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for definition */
+}
+.main{
+  background-color: #415a77; /* Medium navy for main form background */
+  width:800px;
+  margin:auto;
+  border-radius:0px 0px 10px 10px; /* Rounded bottom corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+form{
+  padding: 20px; /* Increased padding within the form */
+}
+#name{
+  width:100%;
+  height:80px;
+  margin-bottom: 20px; /* Added margin for spacing */
+  position: relative; /* Add position relative to contain absolute label */
+}
+.name{
+  margin-left:25px;
+  margin-top:10px; /* Reduced top margin to align better */
+  width:125px;
+  color: #e0e1dd; /* Off-white for labels */
+  font-size: 18px;
+  font-weight: 700;
+}
+/* Styling for the combined full name input */
+#fullname{
+  position:relative; /* Keep relative to its normal flow */
+  left:200px;
+  top:-37px; /* Adjusted top to pull it up after label */
+  line-height:40px;
+  border-radius:6px;
+  padding:0 22px;
+  font-size:16px;
+  width: 480px;
+  color:#333; /* Darker text for input fields */
+  background-color: #e0e1dd; /* Light background for input fields */
+  border: 1px solid #778da9; /* Subtle border */
+}
+/* Styling for the combined name label */
+#namelabel{
+  position: relative; /* Changed to relative */
+  left:200px; /* Align with input */
+  top: -15px; /* Adjust top to position it above the input */
+  color:#c0c0c0; /* Lighter grey for sub-labels */
+  text-transform: capitalize;
+  font-size:14px;
+  display: block; /* Make it a block element to take its own line */
+  width: 480px; /* Match input width for alignment */
+  text-align: left; /* Align text to left */
+}
+
+#reason_for_leave{
+  position: relative;
+  left:200px;
+  top:-37px;
+  border-radius:6px;
+  width: 480px;
+  padding:10px 22px; /* Added vertical padding */
+  font-size:16px;
+  color: #333;
+  background-color: #e0e1dd;
+  border: 1px solid #778da9;
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px; /* Increased minimum height */
+  line-height: 1.5; /* Improved line spacing */
+}
+
+#mobile{
+  position: relative;
+  left:200px;
+  top:-37px;
+  border-radius:6px;
+  width: 220px;
+  padding:0 22px;
+  font-size:16px;
+  color: #333;
+  background-color: #e0e1dd;
+  border: 1px solid #778da9;
+  line-height: 40px;
+}
+
+#std_select{
+  position: relative;
+  left:200px;
+  top:-37px;
+  border-radius:6px;
+  width: 217px;
+  padding:0 22px;
+  height:40px;
+  font-size:16px;
+  color: #333;
+  background-color: #e0e1dd;
+  border: 1px solid #778da9;
+  line-height: 40px;
+  outline: none;
+  overflow: hidden;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+.option option{
+  font-size: 20px;
+}
+
+/* Removed unused styles for #travel, #symptoms, #centers, .arrange */
+#travel, #symptoms, #centers, .arrange {
+  display: none;
+}
+
+#submit {
+  background-color: #0a6da3; /* Professional blue for submit button */
+  display: block;
+  margin: 30px 0px 0px 20px; /* Adjusted margin */
+  text-align: center;
+  border-radius: 8px; /* Slightly less rounded */
+  border:none; /* No border for a cleaner look */
+  padding: 15px 120px; /* Increased padding */
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smoother transition */
+  font-size: 18px; /* Larger font for button */
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+#submit:hover{
+  background-color: #085a85; /* Darker blue on hover */
+}
+#navbar {
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #001f3f; /* Deep navy for navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for separation */
+}
+
+#navbar ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 10px 0; /* Vertical padding for navbar links */
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+#navbar ul li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #e0e1dd; /* Off-white for better visibility */
+  font-size: 18px; /* Adjusted font size */
+  text-decoration: none;
+  padding: 0.8em 1.2em; /* Adjusted padding */
+  white-space: nowrap;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
+}
+
+#navbar ul li a:hover {
+  border-bottom: 3px solid #778da9; /* Muted blue for hover border */
+  color: #a7bed3; /* Lighter shade on hover */
+}
